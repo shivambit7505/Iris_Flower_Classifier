@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌸 Iris Flower Classifier</h1>
+            <p>Classify iris flowers using machine learning</p>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>Enter Flower Measurements</h2>
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="sepalLength">Sepal Length (cm)</label>
+                        <input 
+                            type="number" 
+                            id="sepalLength" 
+                            name="sepal_length" 
+                            step="0.1" 
+                            placeholder="4.3 - 7.9"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sepalWidth">Sepal Width (cm)</label>
+                        <input 
+                            type="number" 
+                            id="sepalWidth" 
+                            name="sepal_width" 
+                            step="0.1" 
+                            placeholder="2.0 - 4.4"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petalLength">Petal Length (cm)</label>
+                        <input 
+                            type="number" 
+                            id="petalLength" 
+                            name="petal_length" 
+                            step="0.1" 
+                            placeholder="1.0 - 6.9"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petalWidth">Petal Width (cm)</label>
+                        <input 
+                            type="number" 
+                            id="petalWidth" 
+                            name="petal_width" 
+                            step="0.1" 
+                            placeholder="0.1 - 2.5"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Classify</button>
+                </form>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>Classification Result</h2>
+                <div id="resultContent"></div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <h2>Error</h2>
+                <p id="errorMessage"></p>
+            </div>
+
+            <div class="info-section">
+                <h2>Iris Species Reference</h2>
+                <div class="species-grid">
+                    <div class="species-card">
+                        <h3>Setosa</h3>
+                        <p>Small flowers with short petals</p>
+                    </div>
+                    <div class="species-card">
+                        <h3>Versicolor</h3>
+                        <p>Medium-sized flowers with medium petals</p>
+                    </div>
+                    <div class="species-card">
+                        <h3>Virginica</h3>
+                        <p>Large flowers with long petals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Built with Machine Learning | Iris Dataset</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
